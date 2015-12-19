@@ -3,6 +3,7 @@ $(function() {
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         // 処理に成功した場合
+        alert("WEBから位置情報を取得しました。");
         var lat = position.coords.latitude,
             lng = position.coords.longitude,
             alt = position.coords.altitude,
@@ -42,6 +43,7 @@ function setWebGeoLocation(lat, lng, accuracy) {
 }
 
 function setNativeGeoLocation(lat, lng, accuracy) {
+  alert("ネイティブ側から位置情報を取得しました。");
   var elem = document.getElementById("nativeGeoLocationResult");
   elem.innerHTML = lat + ", " + lng + ", " + accuracy;
 }
