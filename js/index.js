@@ -7,7 +7,7 @@ $(function() {
             lng = position.coords.longitude,
             alt = position.coords.altitude,
             acc = position.coords.accuracy;
-        alert("lat: " + lat + ", lng: " + lng + ", alt: " + alt + ", acc: " + acc);
+        setWebGeoLocation(lat, lng, acc);
       }, function(error) {
         // 処理に失敗した場合
         switch(error.code) {
@@ -35,3 +35,8 @@ $(function() {
   });
 
 });
+
+function setWebGeoLocation(lat, lng, accuracy) {
+  var elem = document.getElementById("webGeoLocationResult");
+  elem.innerHTML = lat + ", " + lng + ", " + accuracy;
+}
