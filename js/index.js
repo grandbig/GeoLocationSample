@@ -6,9 +6,9 @@ $(function() {
         alert("WEBから位置情報を取得しました。");
         var lat = position.coords.latitude,
             lng = position.coords.longitude,
-            alt = position.coords.altitude,
             acc = position.coords.accuracy;
         setWebGeoLocation(lat, lng, acc);
+        document.location = "com.kato.geolocation://saveWebGeoLocationToStorage?" + lat + "&" + lng + "&" + acc;
       }, function(error) {
         // 処理に失敗した場合
         switch(error.code) {
