@@ -40,3 +40,8 @@ function setWebGeoLocation(lat, lng, accuracy) {
   var elem = document.getElementById("webGeoLocationResult");
   elem.innerHTML = lat + ", " + lng + ", " + accuracy;
 }
+
+function setNativeGeoLocation(lat, lng, accuracy) {
+  var elem = document.getElementById("nativeGeoLocationResult");
+  elem.innerHTML = lat + ", " + lng + ", " + accuracy;
+}

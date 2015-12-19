@@ -7,7 +7,13 @@ html, body {
 
 #content {
   position: relative;
-  width: 100%
+  width: 100%;
   height: 100%;
+  padding: 10px;
+}
+
+#webGeoLocation,
+#nativeGeoLocation {
+  position: relative;
   padding: 10px;
 }
